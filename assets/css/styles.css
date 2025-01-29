@@ -204,7 +204,7 @@ img {
 .skills__names i {
     color: hsl(var(--hue-color), 50%, 40%); /* Default icon color */
     font-size: 1.5rem; /* Default icon size */
-    margin-right: auto; /* Spacing between icon and text */
+    margin-right: 1rem; /* Spacing between icon and text */
     margin-left: auto;
     transition: color 0.3s ease; /* Smooth color transition on hover */
     
