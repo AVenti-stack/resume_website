@@ -3,19 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====FONT AWESOME===== -->
+        <!-- Font Awesome CDN - No Integrity Attribute -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Portfolio website complete</title>
+
+        <title>Portfolio website</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Marlon</a>
+                    <a href="#" class="nav__logo">Venti</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -23,7 +29,7 @@
                         <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -49,6 +55,9 @@
                   
                     <a href="https://github.com/AVenti-stack" class="home__social-icon" target="_blank" rel="noopener noreferrer">
                         <i class='bx bxl-github' ></i></a>
+
+                    <a href="assets/img/Giang (Vanessa) Nguyen SWE .pdf" class="home__social-icon" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-pdf"></i></a>
                 </div>
 
                 <div class="home__img">
@@ -102,7 +111,7 @@
                              can be utilized to enhance user experience and drive business objectives.</p>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
+                                <i class="fa-solid fa-code skills__icon"></i>
                                 <span class="skills__name">Java Python C++ SQL</span>
                             </div>
                             <div class="skills__bar skills__html">
@@ -114,7 +123,7 @@
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
+                                <i class='bx bxl-javascript skills__icon' ></i>
                                 <span class="skills__name">CSS3 HTML JS</span>
                             </div>
                             <div class="skills__bar skills__css">
@@ -126,7 +135,7 @@
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <i class="fa-brands fa-react skills__icon"></i>
                                 <span class="skills__name">React Angular Flutter</span>
                             </div>
                             <div class="skills__bar skills__js">
@@ -138,7 +147,7 @@
                         </div>
                         <div class="skills__data">
                             <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
+                                <i class='bx bxl-github skills__icon'></i>
                                 <span class="skills__name">github</span>
                             </div>
                             <div class="skills__bar skills__ux">
@@ -158,26 +167,32 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+                <h2 class="section-title">Projects</h2>
 
                 <div class="work__container bd-grid">
                     <a href="" class="work__img">
                         <img src="assets/img/work1.gif" alt="">
+                        <div class="work__overlay">GBA</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="assets/img/work2.gif" alt="">
+                        <div class="work__overlay">Project 1</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="assets/img/work3 .gif" alt="">
+                        <div class="work__overlay">Project 2</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="assets/img/work4.gif" alt="">
+                        <div class="work__overlay">Project 3</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="assets/img/work5.gif" alt="">
+                        <div class="work__overlay">Project 4</div>
                     </a>
                     <a href="" class="work__img">
                         <img src="assets/img/work6.gif" alt="">
+                        <div class="work__overlay">Project 5</div>
                     </a>
                 </div>
             </section>
@@ -206,8 +221,17 @@
               
                 <a href="https://github.com/AVenti-stack" class="home__social-icon" target="_blank" rel="noopener noreferrer">
                     <i class='bx bxl-github' ></i></a>
+
+                <a href="assets/img/Giang (Vanessa) Nguyen SWE .pdf" class="home__social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-pdf"></i></a>
+                
+                <a href="https://www.instagram.com/givng.gvng/" class="home__social-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i></a>
+
             </div>
-            <p class="footer__copy">&#169; Giang Nguyen. All rigths reserved</p>
+            <p class="footer__copy">&#169; Venti</p>
+            <p class="footer__copy">&#169; giang.nguyen.swe@gmail.com</p>
+            <p class="footer__copy">&#169; All rigths reserved</p>
         </footer>
 
 

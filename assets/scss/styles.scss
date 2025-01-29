@@ -30,8 +30,11 @@
     /*===== z index =====*/
     --z-back: -10;
     --z-fixed: 100;
+}
 
-    @media screen and (min-width: 968px){
+/* Media Queries for Variables */
+@media screen and (min-width: 968px){
+    :root{
         --big-font-size: 3.5rem;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
@@ -198,14 +201,31 @@ img{
     &__social{
         display: flex;
         flex-direction: column;
+
         &-icon{
             width: max-content;
             margin-bottom: var(--mb-2);
             font-size: 1.5rem;
             color: var(--second-color);
+            transition: color 0.3s ease;
+            vertical-align: middle;
+
+            i{
+                color: var(--second-color); /* Default icon color */
+                font-size: 1.5rem; /* Icon size */
+                margin-right: 0.5rem; /* Spacing between icon and text */
+                transition: color 0.3s ease; /* Smooth color transition on hover */
+                vertical-align: middle; /* Align icons with text */
+                font-family: "Font Awesome 6 Free"; /* Ensure correct font family */
+                font-weight: 900; /* Solid icons typically use weight 900 */
+            }
 
             &:hover{
                 color: var(--first-color);
+
+                i{
+                    color: var(--first-color); /* Icon color on hover */
+                }
             }
         }
     }
@@ -282,15 +302,30 @@ img{
         margin-bottom: var(--mb-4);
         border-radius: .5rem;
         box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+
+        .skills__names{
+            display: flex;
+            align-items: center;
+
+            i{
+                color: var(--second-color); /* Default icon color */
+                font-size: 1.5rem; /* Icon size */
+                margin-right: 0.5rem; /* Spacing between icon and text */
+                transition: color 0.3s ease; /* Smooth color transition on hover */
+                vertical-align: middle; /* Align icons with text */
+                font-family: "Font Awesome 6 Free"; /* Ensure correct font family */
+                font-weight: 900; /* Solid icons typically use weight 900 */
+            }
+
+            &:hover i{
+                color: var(--first-color); /* Icon color on hover */
+            }
+        }
     }
     &__icon{
         font-size: 2rem;
         margin-right: var(--mb-2);
         color: var(--first-color);
-    }
-    &__names{
-        display: flex;
-        align-items: center;
     }
     &__bar{
         position: absolute;
@@ -373,11 +408,21 @@ img{
     }
     &__social{
         margin-bottom: var(--mb-4);
-    }
-    &__icon{
-        font-size: 1.5rem;
-        color: #fff;
-        margin: 0 var(--mb-2);
+
+        &-icon{
+            i{
+                color: #fff; /* Footer icon color */
+                font-size: 1.5rem;
+                margin: 0 var(--mb-2);
+                transition: color 0.3s ease;
+                font-family: "Font Awesome 6 Free"; /* Ensure correct font family */
+                font-weight: 900; /* Solid icons typically use weight 900 */
+            }
+
+            &:hover i{
+                color: var(--first-color); /* Footer icon color on hover */
+            }
+        }
     }
     &__copy{
         font-size: var(--smaller-font-size);
