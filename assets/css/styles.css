@@ -10,7 +10,7 @@
   /* HSL color mode */
   --hue-color: 345; /* A pinkish hue */
   --first-color: hsl(345, 80%, 85%);
-  --second-color: hsl(var(--hue-color), 76%, 30%);
+  --second-color: hsl(var(--hue-color), 50%, 60%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
