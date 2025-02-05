@@ -1,21 +1,22 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-  /*===== Colores =====*/
-  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /*===== Colors =====*/
+  /* Purple 260 - Red 355 - Blue 224 - Pink 340 */
   /* HSL color mode */
   --hue-color: 345; /* A pinkish hue */
   --first-color: hsl(345, 80%, 85%);
-  --second-color: hsl(var(--hue-color), 76%, 12%);
+  --second-color: hsl(var(--hue-color), 76%, 30%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
   --h2-font-size: 1.25rem;
-  --normal-font-size: .938rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
   /*===== Margenes =====*/
   --mb-2: 1rem;
   --mb-4: 2rem;
@@ -30,7 +31,7 @@
     --big-font-size: 3.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
-    --smaller-font-size: .875rem;
+    --smaller-font-size: 0.875rem;
   }
 }
 
@@ -38,39 +39,33 @@
 *, ::before, ::after {
   box-sizing: border-box;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--second-color);
 }
-
 h1, h2, p {
   margin: 0;
 }
-
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/*===== CLASS CSS ===== */
+/*===== CLASS CSS =====*/
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
@@ -90,7 +85,6 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
-
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
@@ -103,7 +97,6 @@ img {
   margin-left: var(--mb-2);
   margin-right: var(--mb-2);
 }
-
 .l-header {
   width: 100%;
   position: fixed;
@@ -161,8 +154,6 @@ img {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
-/*Active menu*/
 .active-link::after {
   position: absolute;
   content: "";
@@ -172,8 +163,6 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
-
-/*=== Show menu ===*/
 .show {
   right: 0;
 }
@@ -198,26 +187,18 @@ img {
   display: flex;
   flex-direction: column;
 }
-
-.home__social-icon i,
-.footer__social-icon i,
-.skills__names i {
-    color: hsl(var(--hue-color), 50%, 40%); /* Default icon color */
-    font-size: 1.5rem; /* Default icon size */
-    margin-right: 1rem; /* Spacing between icon and text */
-    margin-left: auto;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-    
+.home__social-icon {
+  width: max-content;
+  margin-bottom: var(--mb-2);
+  font-size: 1.5rem;
+  color: var(--second-color);
+  transition: color 0.3s ease;
+  vertical-align: middle;
+  /* The inner <i> gets its own styles in the ICON STYLING block below */
 }
-
-/* Hover Effect */
-.home__social-icon:hover i,
-.footer__social-icon:hover i,
-.skills__names i:hover {
-    color: var(--first-color); /* Icon color on hover */
+.home__social-icon:hover {
+  color: var(--first-color);
 }
-
-
 .home__img {
   position: absolute;
   right: 0;
@@ -283,16 +264,27 @@ img {
   border-radius: 0.5rem;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
-.skills__icon {
-  font-size: 1.5rem; /* Adjust size if needed */
-  color: hsl(var(--hue-color), 50%, 40%); /* Match existing icon color */
-  margin-right: 0.5rem; /* Ensure spacing between icon and text */
-  display: inline-block;
-}
-
 .skills__names {
   display: flex;
   align-items: center;
+}
+.skills__names i {
+  color: var(--second-color);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: color 0.3s ease;
+  vertical-align: middle;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.skills__names:hover i {
+  color: var(--first-color);
+}
+.skills__icon {
+  font-size: 1.5rem;
+  color: hsl(var(--hue-color), 50%, 40%);
+  margin-right: 0.5rem;
+  display: inline-block;
 }
 .skills__bar {
   position: absolute;
@@ -319,35 +311,43 @@ img {
   border-radius: 0.5rem;
 }
 
-/* ===== WORK =====*/
-.project__container {
-  row-gap: 2rem;
+/* ===== WORK (PROJECTS) =====*/
+.work__container, .project__container {
+  /* For the projects section, using grid layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-top: 2rem;
 }
 .work__img {
+  position: relative;
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 .work__img img {
+  width: 100%;
   display: block;
-  width: 100%; /* Ensures the images fit within their container */
-  height: auto;
+  transition: transform 1s;
 }
-
+.work__img:hover img {
+  transform: scale(1.1);
+}
 .work__overlay {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Ensures perfect centering */
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-radius: 5px;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
-
 .work__img:hover .work__overlay {
   opacity: 1;
 }
@@ -387,17 +387,32 @@ img {
 }
 .footer__social {
   margin-bottom: var(--mb-4);
+  /* To shift icons to the right in the footer, you can add a wrapper in the HTML with align="right"
+     or you can add inline HTML (like a span) for spacing.
+     If you want to keep it entirely in the HTML without changing CSS, you might add spaces before the links.
+     Alternatively, if you want a quick inline fix, you can wrap them in a div with style="text-align: right;"
+     Example:
+     <div style="text-align: right;">
+         ... your icons here ...
+     </div>
+  */
 }
-.footer__icon {
-  font-size: 1.5rem;
+.footer__social-icon i {
   color: #fff;
+  font-size: 1.5rem;
   margin: 0 var(--mb-2);
+  transition: color 0.3s ease;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.footer__social-icon:hover i {
+  color: var(--first-color);
 }
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
 
-/* ===== MEDIA QUERIES=====*/
+/* ===== MEDIA QUERIES =====*/
 @media screen and (max-width: 320px) {
   .home {
     row-gap: 2rem;
@@ -434,7 +449,7 @@ img {
     justify-content: center;
     column-gap: 1rem;
   }
-  .project__container {
+  .work__container, .project__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     padding-top: 2rem;
@@ -498,7 +513,7 @@ img {
     align-items: center;
     text-align: initial;
   }
-  .project__container {
+  .work__container, .project__container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
