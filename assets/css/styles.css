@@ -103,6 +103,35 @@ img {
   background-color: var(--first-color);
 }
 
+.project-section-title {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin: var(--mb-2) 0 var(--mb-4) 0;
+  text-align: center;
+}
+
+.project__image-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  width: 100%; /* Ensures full width */
+  margin-top: 20px; /* Adds spacing below the title */
+}
+
+.project__image {
+  width: 60%; /* Adjust image width */
+  max-width: 200px; /* Prevents it from getting too large */
+  border-radius: 15px; /* Rounds the corners */
+}
+
+.project__description {
+  display: block !important; /* Ensures it is visible */
+  overflow: visible !important; /* Prevents text from being hidden */
+  max-height: none !important; /* Allows text to expand fully */
+  white-space: normal; /* Prevents text from collapsing */
+}
+
 /*===== LAYOUT =====*/
 .bd-grid {
   max-width: 1024px;
@@ -357,6 +386,20 @@ img {
 .work__img:hover .work__overlay {
   opacity: 1;
 }
+
+.project__media {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.project__media iframe {
+  width: 800px; /* Increase the width */
+  height: 450px; /* Maintain 16:9 aspect ratio */
+  max-width: 100%; /* Ensures it doesn't overflow on small screens */
+  border-radius: 30px;
+}
+
+
 
 /*===== CONTACT SECTION =====*/
 .contact__input {
